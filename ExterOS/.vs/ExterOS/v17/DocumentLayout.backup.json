@@ -1,0 +1,75 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\super\\source\\repos\\ExterOS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BFF28AE3-F85C-4955-9E80-759FBA168946}|ExterOS\\ExterOS.csproj|c:\\users\\super\\source\\repos\\exteros\\exteros\\kernel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF28AE3-F85C-4955-9E80-759FBA168946}|ExterOS\\ExterOS.csproj|solutionrelative:exteros\\kernel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFF28AE3-F85C-4955-9E80-759FBA168946}|ExterOS\\ExterOS.csproj|c:\\users\\super\\source\\repos\\exteros\\exteros\\gui\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF28AE3-F85C-4955-9E80-759FBA168946}|ExterOS\\ExterOS.csproj|solutionrelative:exteros\\gui\\window.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFF28AE3-F85C-4955-9E80-759FBA168946}|ExterOS\\ExterOS.csproj|c:\\users\\super\\source\\repos\\exteros\\exteros\\audio\\audioplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFF28AE3-F85C-4955-9E80-759FBA168946}|ExterOS\\ExterOS.csproj|solutionrelative:exteros\\audio\\audioplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AudioPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\super\\source\\repos\\ExterOS\\ExterOS\\Audio\\AudioPlayer.cs",
+              "RelativeDocumentMoniker": "ExterOS\\Audio\\AudioPlayer.cs",
+              "ToolTip": "C:\\Users\\super\\source\\repos\\ExterOS\\ExterOS\\Audio\\AudioPlayer.cs",
+              "RelativeToolTip": "ExterOS\\Audio\\AudioPlayer.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBwAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T07:38:58.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Window.cs",
+              "DocumentMoniker": "C:\\Users\\super\\source\\repos\\ExterOS\\ExterOS\\Gui\\Window.cs",
+              "RelativeDocumentMoniker": "ExterOS\\Gui\\Window.cs",
+              "ToolTip": "C:\\Users\\super\\source\\repos\\ExterOS\\ExterOS\\Gui\\Window.cs",
+              "RelativeToolTip": "ExterOS\\Gui\\Window.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T07:27:12.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Kernel.cs",
+              "DocumentMoniker": "C:\\Users\\super\\source\\repos\\ExterOS\\ExterOS\\Kernel.cs",
+              "RelativeDocumentMoniker": "ExterOS\\Kernel.cs",
+              "ToolTip": "C:\\Users\\super\\source\\repos\\ExterOS\\ExterOS\\Kernel.cs*",
+              "RelativeToolTip": "ExterOS\\Kernel.cs*",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowEQAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-19T07:16:35.64Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

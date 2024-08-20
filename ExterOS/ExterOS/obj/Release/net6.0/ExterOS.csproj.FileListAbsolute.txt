@@ -1,0 +1,12 @@
+C:\Users\super\source\repos\ExterOS\ExterOS\bin\Release\net6.0\ExterOS.deps.json
+C:\Users\super\source\repos\ExterOS\ExterOS\bin\Release\net6.0\ExterOS.dll
+C:\Users\super\source\repos\ExterOS\ExterOS\bin\Release\net6.0\ExterOS.pdb
+C:\Users\super\source\repos\ExterOS\ExterOS\obj\Release\net6.0\ExterOS.csproj.AssemblyReference.cache
+C:\Users\super\source\repos\ExterOS\ExterOS\obj\Release\net6.0\ExterOS.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\super\source\repos\ExterOS\ExterOS\obj\Release\net6.0\ExterOS.AssemblyInfoInputs.cache
+C:\Users\super\source\repos\ExterOS\ExterOS\obj\Release\net6.0\ExterOS.AssemblyInfo.cs
+C:\Users\super\source\repos\ExterOS\ExterOS\obj\Release\net6.0\ExterOS.csproj.CoreCompileInputs.cache
+C:\Users\super\source\repos\ExterOS\ExterOS\obj\Release\net6.0\ExterOS.dll
+C:\Users\super\source\repos\ExterOS\ExterOS\obj\Release\net6.0\refint\ExterOS.dll
+C:\Users\super\source\repos\ExterOS\ExterOS\obj\Release\net6.0\ExterOS.pdb
+C:\Users\super\source\repos\ExterOS\ExterOS\obj\Release\net6.0\ref\ExterOS.dll
