@@ -71,24 +71,51 @@ namespace ExterOS
                 }
             }
         }
-
+        Programs.Programs programs = new Programs.Programs();
         private void ShowRead(string[] commandArgs)
         {
-            Programs.Programs programs = new Programs.Programs();
-            programs.ReadProg(commandArgs[1]);
+            if (commandArgs[1] == null)
+            {
+                Console.WriteLine("File argument not provided.");
+            }
+            else
+            {
+                programs.ReadProg(commandArgs[1]);
+            }
         }
 
         private void ShowList(string[] commandArgs)
         {
-            Programs.Programs programs = new Programs.Programs();
-            programs.ListProg(commandArgs[1]);
+            if (commandArgs[1] == null)
+            {
+                Console.WriteLine("Directory argument not provided.");
+            }
+            else
+            {
+                programs.ListProg(commandArgs[1]);
+            }
         }
 
         private void ShowWrite(string[] commandArgs)
         {
             //I'm so tired bruh. JUST LET ME FINISH THIS PROTO.
-            Programs.Programs programs = new Programs.Programs();
-            programs.WriteProg(commandArgs[1], commandArgs[2]);
+            if (commandArgs[1] == null && commandArgs[2] == null)
+            {
+                Console.WriteLine("File, Input arguments not provided.");
+            }
+            if (commandArgs[1] == null && commandArgs[2] != null)
+            {
+                Console.WriteLine("Cannot write to file \" \".");
+
+            }
+            if (commandArgs[1] != null && commandArgs[2] == null)
+            {
+                Console.WriteLine("Cannot write blank input to file.");
+            }
+            else
+            {
+                programs.ReadProg(commandArgs[1]);
+            }
         }
 
         private void ShowHelp()
@@ -101,6 +128,9 @@ namespace ExterOS
             Console.WriteLine("  date    - Displays The Current Date.");
             Console.WriteLine("  echo    - Repeats The Text You Type.");
             Console.WriteLine("  titties - Displays Boobies");
+            Console.WriteLine("  rd      - Read a file");
+            Console.WriteLine("  wr      - Write to file");
+            Console.WriteLine("  ls      - List files");
             Console.WriteLine("  reboot  - Reboots The OS.");
         }
 
