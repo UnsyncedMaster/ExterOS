@@ -6,25 +6,24 @@ namespace Programs
 {
     public class Programs
     {
-        VFSTools vFSTools = new VFSTools();
 
         public void WriteProg(string File, string Input)
         {
-            var FileExists = vFSTools.FileExistanceCheck(File).Result;
+            var FileExists = VFSTools.FileExistanceCheck(File);
             if (!FileExists)
             {
                 System.Console.WriteLine("This file does not exist. Do you want to create it now?\n\r[Y] [N]");
                 ConsoleKeyInfo ConsoleKeyInfo = System.Console.ReadKey(true);
                 if (ConsoleKeyInfo.Key == ConsoleKey.Y)
                 {
-                    vFSTools.CreateFile(File);
-                    vFSTools.Write(File, Input);
+                    VFSTools.CreateFile(File);
+                    VFSTools.Write(File, Input);
                 }
             }
         }
         public void ListProg(string Directory)
         {
-            var ListEntries = vFSTools.List(Directory).Result;
+            var ListEntries = VFSTools.List(Directory);
             foreach (var Entry in ListEntries)
             {
                 System.Console.WriteLine(Entry);
@@ -32,7 +31,7 @@ namespace Programs
         }
         public void ReadProg(string File)
         {
-            System.Console.WriteLine(vFSTools.Read(File).Result);
+            System.Console.WriteLine(VFSTools.Read(File));
 
         }
     }

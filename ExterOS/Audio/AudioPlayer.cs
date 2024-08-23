@@ -1,8 +1,8 @@
 ﻿using Cosmos.HAL.Audio;
-using Cosmos.HAL.Drivers.PCI.Audio;
 using Cosmos.System.Audio;
 using Cosmos.Debug.Kernel;
 using System;
+using Cosmos.HAL.Drivers.Audio;
 
 namespace ExterOS.Audio
 {
@@ -14,7 +14,8 @@ namespace ExterOS.Audio
 
         static AudioPlayer()
         {
-            Debugger = new Debugger("System", "Audio");
+            //Broke for some odd reason??
+            Debugger = new Debugger("AudioSystem");
             Mixer = new AudioMixer();
             AM = new AudioManager();
             IsAvailable = false;

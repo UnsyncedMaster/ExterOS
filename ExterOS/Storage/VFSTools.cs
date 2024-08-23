@@ -15,7 +15,7 @@ using System.Collections.Generic;
 using System.Reflection.PortableExecutable;
 
 /// <summary>
-/// Wrapper for Cosmos VFS interaction. Contains mostly Tasks instead of Voids like referenced code. 
+/// Wrapper for Cosmos VFS interaction. Contains mostly statics instead of Voids like referenced code. 
 /// </summary>
 public class VFSTools
 {
@@ -23,15 +23,15 @@ public class VFSTools
     /// "Wrapper" for CosmosVFS initialization.
     /// Initializes VFS. Use the result of this as a global.
     /// </summary>
-    public Task Initialize()
+    public static bool Initialize()
     {
         CosmosVFS CFileSystem = new CosmosVFS();
         //This should make the file system usable within ExterOS
         VFSManager.RegisterVFS(CFileSystem);
         //Returns true 100% for now, unsure if failure prone.
-        return Task.CompletedTask;
+        return true;
     }
-    public Task<int> GetFreeSpace(ByteMeasurement ConversionMeasurement)
+    public static int GetFreeSpace(ByteMeasurement ConversionMeasurement)
     {
         var ReturnedFreeSpace = 0;
         //Only one drive I presume, there's pretty bad docs for Cosmos.
@@ -41,28 +41,27 @@ public class VFSTools
             //I'm lazy.
             case ByteMeasurement.Bytes:
                 ReturnedFreeSpace = (int)FreeSpace;
-                return Task.FromResult(ReturnedFreeSpace);
+                return ReturnedFreeSpace;
             case ByteMeasurement.Kilobytes:
                 ReturnedFreeSpace = (int)FreeSpace / 1024;
-                return Task.FromResult(ReturnedFreeSpace);
+                return ReturnedFreeSpace;
             case ByteMeasurement.Megabytes:
                 ReturnedFreeSpace = (int)FreeSpace / 1024 / 1024;
-                return Task.FromResult(ReturnedFreeSpace);
+                return ReturnedFreeSpace;
             case ByteMeasurement.Gigabytes:
                 ReturnedFreeSpace = (int)FreeSpace / 1024 / 1024 / 1024;
-                return Task.FromResult(ReturnedFreeSpace);
+                return ReturnedFreeSpace;
             default:
-                ReturnedFreeSpace = (int)FreeSpace;
-                return Task.FromResult(ReturnedFreeSpace);
+                return ReturnedFreeSpace = (int)FreeSpace;
         }
     }
-    public Task<List<Sys.FileSystem.Listing.DirectoryEntry>> List(string Directory)
+    public static List<Sys.FileSystem.Listing.DirectoryEntry> List(string Directory)
     {
         //This wasn't copied from the documentation because I'm tired at all.
         var directoryList = VFSManager.GetDirectoryListing(Directory);
-        return Task.FromResult(directoryList);
+        return directoryList;
     }
-    public Task<string> Read(string File)
+    public static string Read(string File)
     {
         var FileToRead = VFSManager.GetFile(File);
         //Why must I use FS aaaaaaaaaaaaaaaaaaa;
@@ -73,13 +72,13 @@ public class VFSTools
             //I am the one who copies from the Wiki.
             byte[] textToRead = new byte[ReadFileStream.Length];
             ReadFileStream.Read(textToRead, 0, (int)ReadFileStream.Length);
-            return Task.FromResult(Encoding.Default.GetString(textToRead));
+            return Encoding.Default.GetString(textToRead);
         }
-        return Task.FromResult("");
+        return "";
         //Fuck yo errors! Make sure it's not corrupt, dummy.
     }
     //Basic Imp of File Writing
-    public Task Write(string File, string Input)
+    public static bool Write(string File, string Input)
     {
         //I haaaaaaaaaaaaaaaaaaaaaaaaaaate file streams.
         var FileToWrite = VFSManager.GetFile(File);
@@ -90,11 +89,11 @@ public class VFSTools
             byte[] textToWrite = Encoding.ASCII.GetBytes(Input);
             FileWriteStream.Write(textToWrite, 0, textToWrite.Length);
         }
-        return Task.FromResult(true);
+        return true;
         //I once again have no sympathy for you if you decide to write oogum boogum into the input argument.
     }
 
-    public Task<bool> FileExistanceCheck(string File)
+    public static bool FileExistanceCheck(string File)
     {
         var directoryList = VFSManager.GetDirectoryListing("0:\\");
         //I cannot use directorylist.
@@ -110,17 +109,17 @@ public class VFSTools
         }
         if(!FileList.Contains(File)) 
         {
-            return Task.FromResult(false);
+            return false;
         }
         else
         {
-            return Task.FromResult(true);
+            return true;
         }
     }
-    public Task CreateFile(string File)
+    public static bool CreateFile(string File)
     {
         VFSManager.CreateFile(File);
-        return Task.FromResult(true);
+        return true;
     }
 
 }
